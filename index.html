@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h2>Unit Path</h2>
+        <div id="what-to-test">
+            <input id="what" type="text" required>
+        </div>
+
+        <h2>Test Cases</h2>
+        <div id="test-cases">
+            <div class="buttons">
+                <button onclick="addDescribe(event)">Add Describe</button>
+                <button onclick="addTest(event)">Add Test</button>
+            </div>
+        </div>
+
+        <h2>Result</h2>
+        <div id="result">
+            <button onclick="generateResult()">Generate Result</button>
+            <button id="copy-result" onclick="copyResult()">Copy</button>
+            <br>
+            <br>
+            <textarea id="result-text" cols="100" rows="30"></textarea>
+        </div>
+    
+        <div hidden>
+            <div id="describe-block" class="describe-block">
+                <div class="toggle" onclick="toggle(event)"> &#9660 </div>
+                <div class="collapse-header"></div>
+                <div class="hide-in-collapse">
+                    <label>Describe:</label>
+                    <input type="text">
+                    <div class="buttons">
+                        <button onclick="addDescribe(event)">Add Describe</button>
+                        <button onclick="addTest(event)">Add Test</button>
+                        <button onclick="deleteDescribe(event)">Delete Describe</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="test-block" class="test-block">
+                <div class="toggle" onclick="toggle(event)"> &#9660 </div>
+                <div class="collapse-header"></div>
+                <div class="hide-in-collapse">
+                    <label>Test:</label>
+                    <input type="text">
+                    <div class="buttons">
+                        <button onclick="deleteTest(event)">Delete Test</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
